@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проектная работа "Счастье"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="content">
+            <ul>
+                <li>Наше мнение:</li>
+                <li><a href="sabina.html">Сабина</a></li>
+                <li><a href="amina.html">Амина</a></li>
+                <li><a href="nigina.html">Нигина</a></li>
+                <!-- <li><a href="sarik.html">Сардор</a></li> -->
+                <li><a href="said.html">Саидазим</a></li>
+                <!-- <li><a href="azim.html">Азим</a></li> -->
+                <li><a href="yns.html">Юнус</a></li>
+                <!-- <li><a href="ysf.html">Юсуф</a></li> -->
+                <li><a href="abdus.html">Абдусамад</a></li>
+            </ul>
+        </nav>
+        <h1>Проектная работа "Счастье"</h1>
+        <p>Тема: Счастье: что это такое, как его достичь и как его сохранить.</p>
+        <button id="inspireBtn">Получить вдохновение</button>
+        <button id="toggleTheme">Сменить тему</button>
+    </header>
+
+    <button id="toggleButton">☰</button>
+    <div id="sidebar" class="sidebar">
+        <button id="closeButton">×</button>
+        <nav>
+            <h2>Отделы:</h2>
+            <ul>
+                <li><a href="goals.html" onclick="showSection('section1')">Задачи</a></li>
+                <li><a href="target.html" onclick="showSection('section2')">Цель</a></li>
+                <li><a href="etap.html" onclick="showSection('section3')">Этапы работы</a></li>
+                <li><a href="dop.html" onclick="showSection('section4')">Доп. идеи</a></li>
+                <li><a href="result.html" onclick="showSection('section5')">Результат</a></li>
+                <li><a href="video.html" onclick="showSection('section6')">Презентация</a></li>
+                <li><a href="info.html" onclick="showSection('section7')">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="quote" id="quoteDisplay">Цитата появится здесь.</div>
+            <div class="quote-controls">
+                <button id="prevQuote">◀</button>
+                <button id="nextQuote">▶</button>
+            </div>
+        </div>
+
+        <section id="goal" class="card">
+            <h2>Что такое счастье?</h2>
+            <p>Счастье — это состояние удовлетворения и радости, которое испытывает человек...<br><br>>
+             Счастье часто связано с положительными эмоциями, такими как радость, удовлетворение и покой.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+    /* background: url('project.jpg') no-repeat center center fixed; Путь к изображению */
+    background-size: cover; /* Масштабируем изображение */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+    background-color: darkgoldenrod;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+header {
+    background-color: rgba(255, 204, 0, 0.9); /* Полупрозрачный желтый фон */
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ff9900; /* Оранжевый */
+}
+
+h1 {
+    font-size: 2.8em;
+    margin: 0;
+    color: #d62828; /* Красный текст */
+}
+
+h2 {
+    color: #d62828; /* Красный */
+    border-bottom: 2px solid #28a745; /* Зеленый */
+    padding-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto; /* Добавлен отступ сверху */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.info {
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px; /* Ширина боковой панели */
+    background-color: blue;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    padding: 10px;
+    border-bottom: 1px solid darkblue;
+    margin: 20px; 
+}
+
+.sidebar li:hover {
+    background-color: darkblue;
+    color: blue;
+}
+
+.content {
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    padding: 20px;
+}
+
+.quote {
+    font-size: 1.5em;
+    color: blue;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.quote-controls {
+    margin-top: 10px;
+}
+
+.quote-controls button {
+    background-color: #28a745; /* Зеленый */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.quote-controls button:hover {
+    background-color: #218838; /* Темно-зеленый */
+}
+
+.card {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border-left: 5px solid #d62828; /* Красный */
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+button {
+    background-color: #d62828; /* Красный */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a51c1c; /* Темно-красный */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Темная тема */
+body.dark {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark header {
+    background-color: rgba(255, 204, 0, 0.8);
+}
+
+body.dark .card {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark footer {
+    background-color: #222;
+}
+
+
+header {
+    background-color: yellow; 
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ff9900; 
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+
+
+#toggleButton {
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed; /* Фиксированное положение */
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Чтобы кнопка была поверх боковой панели */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Скрыто */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000; /* Поверх всего */
+}
+
+.sidebar.open {
+    left: 0; /* Показать боковую панель */
+}
+
+#closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%; /* Полная ширина на мобильных */
+    }
+
+    #toggleButton {
+        font-size: 28px; /* Увеличить кнопку на мобильных */
+    }
+
+    header {
+        padding: 10px; /* Уменьшить отступы */
+    }
+
+    h1 {
+        font-size: 2em; /* Уменьшить заголовок */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Уменьшить заголовок */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальная раскладка */
+        align-items: center; /* Центрировать элементы */
+    }
+
+    nav li {
+        margin: 5px 0; /* Уменьшить отступы */
+    }
+
+    nav a {
+        padding: 10px; /* Уменьшить отступы в ссылках */
+    }
+
+    .card {
+        margin: 20px 0; /* Уменьшить отступы карточек */
+    }
+}
+
+
+
+
+.sidebar {
+    display: none; /* Полностью скрыть боковую панель */
+}
+
+/* Если вам нужно временно показывать панель, используйте классы */
+.sidebar.open {
+    display: block; /* Показать боковую панель, если это необходимо */
+    position: fixed;
+    top: 0;
+    left: 0; /* Положение панели */
+    width: 250px; /* Ширина боковой панели */
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    z-index: 1000; /* Поверх всего */
+}
+
+@media (max-width: 600px) {
+    header {
+        background: darkorange; /* Убрать фон для заголовка на мобильных устройствах */
+    }
+}
+
